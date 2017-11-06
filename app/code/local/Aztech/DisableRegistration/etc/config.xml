@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Aztech_DisableRegistration>
+			<version>0.1.0</version>
+		</Aztech_DisableRegistration>
+	</modules>
+
+	<frontend>
+		<routers>
+			<customer>
+				<args>
+					<modules>
+						<aztech_controllerextended before="Mage_Customer">Aztech_DisableRegistration</aztech_controllerextended>
+					</modules>
+				</args>
+			</customer>
+		</routers>
+	</frontend>
+
+	<global>
+		<models>
+			<aztech_model>
+				<class>Aztech_DisableRegistration_Model</class>
+			</aztech_model>
+		</models>
+		<helpers>
+			<aztech_helper>
+				<class>Aztech_DisableRegistration_Helper</class>
+			</aztech_helper>
+		</helpers>
+	 </global>
+</config>
